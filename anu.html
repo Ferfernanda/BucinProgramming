@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buat lchachann</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('https://raw.githubusercontent.com/Ferfernanda/BucinProgramming/main/WhatsApp%20Image%202024-08-01%20at%2014.15.40.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            text-align: center;
+            color: #fff;
+            background-color: rgba(255, 107, 129, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            max-width: 500px;
+            opacity: 0; /* Sembunyikan kontainer saat halaman dimuat */
+            transition: opacity 1s ease-in-out; /* Tambahkan transisi */
+        }
+
+        .container::before, .container::after {
+            content: '';
+            position: absolute;
+            width: 400%;
+            height: 400%;
+            background: rgba(246, 201, 208, 0.9);
+            border-radius: 50%;
+            z-index: -1;
+            animation: animate 6s linear infinite;
+        }
+
+        .container::before {
+            top: -50%;
+            left: -50%;
+        }
+
+        .container::after {
+            bottom: -50%;
+            right: -50%;
+        }
+
+        @keyframes animate {
+            0%, 100% {
+                transform: scale(0.5);
+            }
+            50% {
+                transform: scale(1);
+            }
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff8e1;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            color: #ffffff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .heart {
+            color: #ff3e61;
+            font-size: 3rem;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #ff6b81;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            background-color: #ff6b81;
+            color: #fff;
+        }
+
+        .floating-heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff3e61;
+            opacity: 0.7;
+            border-radius: 50%;
+            animation: float 5s infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+                opacity: 0.7;
+            }
+            50% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 0.7;
+            }
+        }
+
+        /* Floating hearts customization */
+        .heart1 { animation-duration: 3s; left: 10%; }
+        .heart2 { animation-duration: 4s; left: 30%; }
+        .heart3 { animation-duration: 6s; left: 50%; }
+        .heart4 { animation-duration: 8s; left: 70%; }
+        .heart5 { animation-duration: 5s; left: 90%; }
+
+    </style>
+
+    <script>
+        window.onload = function() {
+            alert("Hallo Icha");
+            alert("Bisa kebuka ngga?");
+            alert("Lopyu💖");
+            
+            // Ubah latar belakang setelah alert ditampilkan
+            document.body.style.backgroundColor = "rgba(0, 0, 0, 0.8)"; 
+
+            // Munculkan kontainer setelah alert selesai
+            setTimeout(() => {
+                const container = document.querySelector('.container');
+                container.style.opacity = 1; // Setel opacity kontainer menjadi 1 untuk menampilkan
+            }, 500); // Waktu tunda sebelum menampilkan kontainer (dalam milidetik)
+        };
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Happy International Girlfriend Day</h1>
+        <!-- <img src="https://raw.githubusercontent.com/Ferfernanda/BucinProgramming/main/WhatsApp%20Image%202024-08-01%20at%2014.15.40.jpeg" alt="Happy Couple"> -->
+        <p>My Special Love, Icha Nurfadillah💖</p>
+        <a href="https://instagram.com/feeferry_" class="cta-button">Send Love</a>
+        <!-- Floating hearts -->
+        <div class="floating-heart heart1"></div>
+        <div class="floating-heart heart2"></div>
+        <div class="floating-heart heart3"></div>
+        <div class="floating-heart heart4"></div>
+        <div class="floating-heart heart5"></div>
+    </div>
+</body>
+</html>
